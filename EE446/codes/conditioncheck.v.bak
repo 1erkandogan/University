@@ -1,0 +1,52 @@
+module conditioncheck
+(
+	input clk,
+	input FlagWriteE,
+   input FlagC, FlagN, FlagZ, FlagV,
+	input [3:0] CondE,
+	output reg condex,FlagC, FlagN, FlagZ, FlagV
+
+);
+
+reg FlagCInt, FlagZInt, FlagNInt, FlagVInt;
+
+initial
+begin
+    FlagCInt = 0;
+    FlagZInt = 0;
+    FlagNInt = 0;
+    FlagVInt = 0;
+end
+
+
+
+always @(*)
+begin
+	if (FlagWriteE)
+	begin
+		FlagCInt = FlagC;
+		FlagZInt = FlagZ;
+		FlagNInt = FlagN;
+		FlagVInt = FlagV;
+	end
+	case (CondE)
+		4'b0000: condex = FlagZInt;
+		4'b0001: condex = ~FlagZInt;
+		4'b0010: condex = FlagCInt;
+		4'b0011: condex = ~FlagCInt;
+		4'b0100: condex = FlagNInt;
+		4'b0101: condex = ~FlagNInt;
+		4'b0110: condex = FlagVInt;
+		4'b0111: condex = ~FlagVInt;
+		4'b1000: condex = FlagCInt & ~FlagZInt;
+		4'b1001: condex = ~FlagCInt | FlagZInt;
+		4'b1010: condex = FlagNInt == FlagVInt;
+		4'b1011: condex = FlagNInt != FlagVInt;
+		4'b1100: condex = ~FlagZInt & (FlagNInt == FlagVInt);
+		4'b1101: condex = FlagZInt | (FlagNInt != FlagVInt);
+		4'b1110: condex = 1;
+		4'b1111: condex = 0;
+	endcase        
+
+end
+endmodule

@@ -1,0 +1,155 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/15/2023 01:48:07"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          eru446
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module eru446_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg FlushD;
+reg FlushE;
+reg [1:0] ForwardAE;
+reg [1:0] ForwardBE;
+reg [3:0] inp_test;
+reg StallD;
+reg StallF;
+// wires                                               
+wire [31:0] InstF;
+wire PCSrcW;
+wire [3:0] test_out;
+
+// assign statements (if any)                          
+eru446 i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.FlushD(FlushD),
+	.FlushE(FlushE),
+	.ForwardAE(ForwardAE),
+	.ForwardBE(ForwardBE),
+	.inp_test(inp_test),
+	.InstF(InstF),
+	.PCSrcW(PCSrcW),
+	.StallD(StallD),
+	.StallF(StallF),
+	.test_out(test_out)
+);
+initial 
+begin 
+#600000 $finish;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+
+// FlushD
+initial
+begin
+	FlushD = 1'b0;
+end 
+
+// FlushE
+initial
+begin
+	FlushE = 1'b0;
+end 
+// ForwardAE[ 1 ]
+initial
+begin
+	ForwardAE[1] = 1'b0;
+end 
+// ForwardAE[ 0 ]
+initial
+begin
+	ForwardAE[0] = 1'b0;
+end 
+// ForwardBE[ 1 ]
+initial
+begin
+	ForwardBE[1] = 1'b0;
+end 
+// ForwardBE[ 0 ]
+initial
+begin
+	ForwardBE[0] = 1'b0;
+end 
+
+// StallD
+initial
+begin
+	StallD = 1'b0;
+end 
+
+// StallF
+initial
+begin
+	StallF = 1'b0;
+end 
+// inp_test[ 3 ]
+initial
+begin
+	inp_test[3] = 1'b0;
+	inp_test[3] = #160000 1'b1;
+	inp_test[3] = #160000 1'b0;
+	inp_test[3] = #160000 1'b1;
+end 
+// inp_test[ 2 ]
+initial
+begin
+	repeat(3)
+	begin
+		inp_test[2] = 1'b0;
+		inp_test[2] = #80000 1'b1;
+		# 80000;
+	end
+	inp_test[2] = 1'b0;
+	inp_test[2] = #80000 1'b1;
+end 
+// inp_test[ 1 ]
+initial
+begin
+	repeat(7)
+	begin
+		inp_test[1] = 1'b0;
+		inp_test[1] = #40000 1'b1;
+		# 40000;
+	end
+	inp_test[1] = 1'b0;
+end 
+// inp_test[ 0 ]
+always
+begin
+	inp_test[0] = 1'b0;
+	inp_test[0] = #20000 1'b1;
+	#20000;
+end 
+endmodule
+

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/erkan/Desktop/eru446/simulation/qsim
+veru446
+!s110 1686782889
+!i10b 1
+!s100 f[bYiO_R4EF=3OXPP9?Sn3
+IPS6?3170^n7cgOIYC]06f0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1686782888
+8eru446.vo
+Feru446.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1686782889.000000
+!s107 eru446.vo|
+!s90 -work|work|eru446.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+veru446_vlg_vec_tst
+!s110 1686782890
+!i10b 1
+!s100 AYW`moBNz`BT>JYKYIb<N0
+IJSC`WS8:YY7oEU@n:KT;d2
+R1
+R0
+w1686782887
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1686782890.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R3
+R4

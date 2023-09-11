@@ -1,0 +1,45 @@
+module Register_exec
+    (
+	  input  clk, reset
+	  input PCSrcD, BranchD, RegWriteD, MemWriteD, MemtoRegD, ALUControlD, ALUSrcD, FlagWriteD, CondD, Flags,
+	  input RD1D, RD2D, WA3D, ExtImmD,
+
+	  output PCSrcE, BranchE, RegWriteE, MemWriteE, MemtoRegE, ALUControlE, ALUSrcE, FlagWriteE, COndE, FlagsE,
+	  output RD1E, RD2E, WA3E, ExtImmE,
+    );
+	 
+always@(posedge clk) begin
+	if(reset == 1'b0)
+		PCSrcE <= PCSrcD;
+		BranchE <= BranchD;
+		RegWriteE <= RegWriteD;
+		MemWriteE <= MemWriteD;
+		MemtoRegE <= MemtoRegD;
+		ALUControlE <= ALUControlD;
+		ALUSrcE <= ALUSrcD;
+		FlagWriteE <= FlagWriteD;
+		CondE <= CondD;
+		FlagsE <= Flags;
+		RD1E <= RD1D;
+		RD2E <= RD2D;
+		WA3E <= WA3D;
+		ExtImmE <= ExtImmD;
+
+	else	
+		PCSrcE <= 0;
+		BranchE <= 0;
+		RegWriteE <= 0;
+		MemWriteE <= 0;
+		MemtoRegE <= 0;
+		ALUControlE <= 0;
+		ALUSrcE <= 0;
+		FlagWriteE <= 0;
+		CondE <= 0;
+		FlagsE <= 0;
+		RD1E <= 0;
+		RD2E <= 0;
+		WA3E <= 0;
+		ExtImmE <= 0;
+end
+	 
+endmodule

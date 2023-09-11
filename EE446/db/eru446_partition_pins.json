@@ -1,0 +1,209 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PCSrcW",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[31]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[30]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[29]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[28]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[27]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[26]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[25]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[24]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[23]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[22]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[21]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[20]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[19]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[18]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[17]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[16]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[15]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[14]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[13]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[12]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[11]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[10]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[9]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[8]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[7]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[6]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[5]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[4]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[3]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[2]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InstF[0]",
+					"strict" : false
+				},
+				{
+					"name" : "test_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "test_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "test_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "test_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "ForwardAE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ForwardAE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ForwardBE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ForwardBE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "StallF",
+					"strict" : false
+				},
+				{
+					"name" : "inp_test[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inp_test[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inp_test[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inp_test[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FlushE",
+					"strict" : false
+				},
+				{
+					"name" : "FlushD",
+					"strict" : false
+				},
+				{
+					"name" : "StallD",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

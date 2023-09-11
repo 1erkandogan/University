@@ -1,0 +1,46 @@
+module Register_mem
+    (
+	  input  clk, reset,
+	  input PCSrcE_CondEx, RegWritE_CondEx, MemwriteE_CondEx, MemtoRegE,
+	  output reg PCSrcM, RegWriteM, MemWriteM, MemtoRegM
+    );
+	 
+always@(posedge clk) begin
+	if(reset == 1'b0)
+		begin
+		PCSrcE <= PCSrcD;
+		BranchE <= BranchD;
+		RegWriteE <= RegWriteD;
+		MemWriteE <= MemWriteD;
+		MemtoRegE <= MemtoRegD;
+		ALUControlE <= ALUControlD;
+		ALUSrcE <= ALUSrcD;
+		FlagWriteE <= FlagWriteD;
+		CondE <= CondD;
+		FlagsE <= Flags;
+		RD1E <= RD1D;
+		RD2E <= RD2D;
+		WA3E <= WA3D;
+		ExtImmE <= ExtImmD;
+		end
+
+	else
+		begin
+		PCSrcE <= 0;
+		BranchE <= 0;
+		RegWriteE <= 0;
+		MemWriteE <= 0;
+		MemtoRegE <= 0;
+		ALUControlE <= {4{1'b0}};
+		ALUSrcE <= 0;
+		FlagWriteE <= 0;
+		CondE <= {4{1'b0}};
+		FlagsE <= {4{1'b0}};
+		RD1E <= 0;
+		RD2E <= 0;
+		WA3E <= 0;
+		ExtImmE <= {32{1'b0}};
+		end
+end
+	 
+endmodule

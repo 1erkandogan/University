@@ -1,0 +1,37 @@
+# do eru446.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:48:09 on Jun 15,2023
+# vlog -work work eru446.vo 
+# -- Compiling module eru446
+# 
+# Top level modules:
+# 	eru446
+# End time: 01:48:09 on Jun 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:48:10 on Jun 15,2023
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module eru446_vlg_vec_tst
+# 
+# Top level modules:
+# 	eru446_vlg_vec_tst
+# End time: 01:48:10 on Jun 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.eru446_vlg_vec_tst 
+# Start time: 01:48:10 on Jun 15,2023
+# Loading work.eru446_vlg_vec_tst
+# Loading work.eru446
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 41897 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#25
+# Simulation time: 0 ps
+# ** Note: $finish    : Waveform.vwf.vt(62)
+#    Time: 600 ns  Iteration: 0  Instance: /eru446_vlg_vec_tst
+# End time: 01:48:13 on Jun 15,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1

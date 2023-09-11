@@ -1,0 +1,94 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// PROGRAM		"Quartus Prime"
+// VERSION		"Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition"
+// CREATED		"Wed Apr 19 02:21:48 2023"
+
+module controller_v2(
+	clk,
+	FlagC,
+	FlagV,
+	FlagN,
+	FlagZ,
+	instruction,
+	PCSrc,
+	MemWrite,
+	RegWrite,
+	ALUSrcB,
+	ImmSrc,
+	flagUpdate,
+	carry,
+	MemtoReg,
+	ALUOp,
+	RegSrc
+);
+
+
+input wire	clk;
+input wire	FlagC;
+input wire	FlagV;
+input wire	FlagN;
+input wire	FlagZ;
+input wire	[31:0] instruction;
+output wire	PCSrc;
+output wire	MemWrite;
+output wire	RegWrite;
+output wire	ALUSrcB;
+output wire	ImmSrc;
+output wire	flagUpdate;
+output wire	carry;
+output wire	MemtoReg;
+output wire	[3:0] ALUOp;
+output wire	[1:0] RegSrc;
+
+wire	SYNTHESIZED_WIRE_0;
+wire	SYNTHESIZED_WIRE_1;
+wire	SYNTHESIZED_WIRE_2;
+
+
+
+
+
+combinationalLogicUnit	b2v_inst(
+	.clk(clk),
+	.FlagC(FlagC),
+	.FlagZ(FlagZ),
+	.FlagN(FlagN),
+	.FlagV(FlagV),
+	.PCSrcD(SYNTHESIZED_WIRE_0),
+	.MemWriteD(SYNTHESIZED_WIRE_1),
+	.RegWriteD(SYNTHESIZED_WIRE_2),
+	.instruction(instruction),
+	.PCSrc(PCSrc),
+	.MemWrite(MemWrite),
+	.RegWrite(RegWrite));
+
+
+decoderUnit	b2v_inst1(
+	.instruction(instruction),
+	.PCSrcD(SYNTHESIZED_WIRE_0),
+	.MemtoReg(MemtoReg),
+	.MemWriteD(SYNTHESIZED_WIRE_1),
+	.ALUSrcB(ALUSrcB),
+	.ImmSrc(ImmSrc),
+	.RegWriteD(SYNTHESIZED_WIRE_2),
+	.flagUpdate(flagUpdate),
+	.carry(carry),
+	.ALUOp(ALUOp),
+	.RegSrc(RegSrc));
+
+
+endmodule
